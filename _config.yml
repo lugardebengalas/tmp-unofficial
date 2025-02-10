@@ -1,0 +1,30 @@
+baseurl: /tmp-unofficial 
+exclude: [CNAME, README.md]
+permalink: /blog/:categories/:title/
+paginate: 5
+paginate_path: /blog/:num/
+collections:
+  doc:
+    permalink: "/doc/:collection/:path/"
+    output: true
+  posts:
+    permalink: "/post/:year/:month/:day/:title/"
+    output: true
+  tutorials:
+    permalink: "/tutorial/:collection/:path/"
+    output: true
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+sass:
+  style: compressed
